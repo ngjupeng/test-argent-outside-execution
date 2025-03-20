@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { StarknetChainId } from "../utils/constant";
 import { getOutsideExecutionCall, getTypedData } from "../utils/outsideExecution";
 import { SignerType, randomStarknetKeyPair, signerTypeToCustomEnum } from "../utils/signer";
@@ -197,15 +196,6 @@ const DeployMultisig = () => {
     <div>
       <div className="flex flex-col items-center gap-6 p-8 text-white">
         <h1 className="text-2xl font-bold">Deploy Multisig Account for STRK</h1>
-        {/* Deploy Button */}
-        <button
-          onClick={() => handleDeployArgentMultisig([YOUR_STARKNET_ACCOUNT_PUBLIC_KEY], [])}
-          //   disabled={isDeploying || addresses.length === 0}
-          className="btn btn-primary btn-lg mt-4"
-        >
-          Deploy Argent Multisig That Contain Braavos Account
-        </button>
-
         <button onClick={handleSignTransactionUsingOutsideExecutionMetamask} className="btn btn-primary btn-lg mt-4">
           Execute Outside Execution Metamask (PLEASE FIRST CONNECT METAMASK)
         </button>
